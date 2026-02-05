@@ -1,0 +1,38 @@
+/* ========================================
+   pages/SignUp/SignUp.css
+   Sign Up Page Styles
+   ======================================== */
+
+.signup-page {
+    min-height: 100vh;
+    background-color: var(--white);
+}
+
+/* Error Banner */
+.signup-error-banner {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-sm);
+    color: var(--error);
+    background-color: var(--error-light);
+    border: 1px solid var(--error);
+    border-radius: var(--radius-sm);
+}
+
+/* Buying Notice */
+.signup-buying-notice {
+    margin-top: 1.25rem;
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+/* Footer */
+.signup-footer {
+    text-align: center;
+}
+
+.signup-footer-text {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}

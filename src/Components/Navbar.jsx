@@ -3,15 +3,22 @@ import { Link, useNavigate } from 'react-router-dom'
 import logo from './logo.jpeg'
 import SideMenu from './SideMenu'
 import './sideMenu.css'
+import { useAuth } from '../context'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [query, setQuery] = useState('')   // ✅ THIS WAS MISSING
-  const navigate = useNavigate()            // ✅ REQUIRED FOR SEARCH
+  const [query, setQuery] = useState('')
+  const navigate = useNavigate()
+  const { user, isAuthenticated, logout } = useAuth()
 
   const handleSearch = () => {
     if (!query.trim()) return
     navigate(`/search?q=${query}`)
+  }
+
+  const handleLogout = () => {
+    logout()
+    navigate('/')
   }
 
   return (
@@ -54,7 +61,36 @@ const Navbar = () => {
         </div>
 
         <div className="n4">
-          <p>🛒 Cart</p>
+          {/* Conditional Auth UI */}
+          <div className="nav-auth">
+            {isAuthenticated ? (
+              <div className="nav-auth-link nav-auth-logged-in">
+                <span className="nav-auth-greeting">Hello, {user?.name}</span>
+                <button className="nav-logout-btn" onClick={handleLogout}>
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link to="/signin" className="nav-auth-link">
+                <span className="nav-auth-greeting">Hello, sign in</span>
+                <span className="nav-auth-text">Account & Lists</span>
+              </Link>
+            )}
+          </div>
+
+          <div className="nav-orders">
+            <Link to="/" className="nav-orders-link">
+              <span className="nav-orders-greeting">Returns</span>
+              <span className="nav-orders-text">& Orders</span>
+            </Link>
+          </div>
+
+          <div className="nav-cart">
+            <Link to="/" className="nav-cart-link">
+              <span className="nav-cart-icon">🛒</span>
+              <span className="nav-cart-text">Cart</span>
+            </Link>
+          </div>
         </div>
       </div>
 
