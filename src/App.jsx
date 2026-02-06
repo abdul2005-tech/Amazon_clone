@@ -11,6 +11,7 @@ import Furniture from './Components/Furniture';
 import Grocery from './Components/Grocery';
 import Mxplay from './Components/Mxplay';
 import SearchResults from './Components/SearchResults';
+import Cart from './Components/Cart';
 
 // Auth Pages
 import SignIn from './pages/SignIn';
@@ -44,7 +45,8 @@ const router = createBrowserRouter([
       { path: 'furniture', element: <Furniture />, loader: fetcher },
       { path: 'grocery', element: <Grocery />, loader: fetcher },
       { path: 'product/:id', element: <Product />, loader: fetcher },
-      { path: 'search', element: <SearchResults />, loader: fetcher }
+      { path: 'search', element: <SearchResults />, loader: fetcher },
+      { path: 'cart', element: <Cart /> }
     ]
   },
   // Auth Routes (without navbar)

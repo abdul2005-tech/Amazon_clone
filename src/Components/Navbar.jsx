@@ -3,13 +3,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import logo from './logo.jpeg'
 import SideMenu from './SideMenu'
 import './sideMenu.css'
-import { useAuth } from '../context'
+import { useAuth, useCart } from '../context'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [query, setQuery] = useState('')
   const navigate = useNavigate()
   const { user, isAuthenticated, logout } = useAuth()
+  const { cartCount } = useCart()
 
   const handleSearch = () => {
     if (!query.trim()) return
@@ -86,9 +87,10 @@ const Navbar = () => {
           </div>
 
           <div className="nav-cart">
-            <Link to="/" className="nav-cart-link">
+            <Link to="/cart" className="nav-cart-link">
               <span className="nav-cart-icon">🛒</span>
               <span className="nav-cart-text">Cart</span>
+              {cartCount > 0 && <span className="nav-cart-count">{cartCount}</span>}
             </Link>
           </div>
         </div>

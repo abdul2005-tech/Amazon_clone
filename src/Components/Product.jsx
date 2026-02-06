@@ -1,14 +1,23 @@
 import React from 'react'
 import { useLoaderData, useParams } from 'react-router-dom'
+import { useCart, useToast } from '../context'
 
 const Product = () => {
   const data = useLoaderData() || []
   const { id } = useParams()
 
+  const { addToCart } = useCart()
+  const { showToast } = useToast()
+
   const product = data.find(item => item.id === Number(id))
 
   if (!product) {
     return <h2 style={{ padding: "40px" }}>Product not found</h2>
+  }
+
+  const handleAddToCart = () => {
+    addToCart(product)
+    showToast("Item added to cart")
   }
 
   return (
@@ -51,7 +60,7 @@ const Product = () => {
           </div>
 
           <div className="pp-actions">
-            <button className="pp-btn cart">Add to Cart</button>
+            <button className="pp-btn cart" onClick={handleAddToCart}>Add to Cart</button>
             <button className="pp-btn buy">Buy Now</button>
           </div>
 
