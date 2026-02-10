@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SideMenu = ({ isOpen, onClose }) => {
   return (
@@ -11,7 +12,10 @@ const SideMenu = ({ isOpen, onClose }) => {
 
         {/* Header */}
         <div className="side-header">
-          <span>👤 Hello, sign in</span>
+          <Link to="/account" onClick={onClose} style={{ textDecoration: 'none', color: 'white', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <span style={{ fontSize: '25px' }}>👤</span>
+            <span style={{ fontWeight: 'bold', fontSize: '19px' }}>Hello, sign in</span>
+          </Link>
           <button className="close-btn" onClick={onClose}>✕</button>
         </div>
 
