@@ -22,11 +22,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 90vw;
   height: 100px;
   /* Navbar height */
   z-index: 100;
-  background-color: pink;
+  background-color: rgb(211, 192, 255);
   display: flex;
   justify-content: center;
   align-items: center;
