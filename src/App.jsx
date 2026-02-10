@@ -16,6 +16,7 @@ import Cart from './Components/Cart';
 // Auth Pages
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import Account from './pages/Account';
 
 async function fetcher() {
   const res = await fetch('https://dummyjson.com/products')
@@ -51,7 +52,8 @@ const router = createBrowserRouter([
   },
   // Auth Routes (without navbar)
   { path: '/signin', element: <SignIn /> },
-  { path: '/signup', element: <SignUp /> }
+  { path: '/signup', element: <SignUp /> },
+  { path: '/account', element: <Account /> }
 ])
 
 
