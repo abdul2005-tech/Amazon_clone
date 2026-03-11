@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from './logo.jpeg'
-import SideMenu from './SideMenu'
+import SideMenu from './sideMenu.css'
 import './sideMenu.css'
 import { useAuth, useCart } from '../context'
 
