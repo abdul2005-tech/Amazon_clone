@@ -1,0 +1,96 @@
+/* ========================================
+   components/ui/Input/Input.css
+   Input Component Styles
+   ======================================== */
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+/* Label Styles */
+.input-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--gray-700);
+}
+
+.input-required {
+    color: var(--error);
+    margin-left: 0.25rem;
+}
+
+/* Input Container */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Input Field Styles */
+.input-field {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font-size: var(--font-size-md);
+    color: var(--gray-700);
+    background-color: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.input-field:focus {
+    border-color: var(--amazon-orange);
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.15);
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: var(--gray-400);
+}
+
+/* Error State */
+.input-field--error {
+    border-color: var(--error);
+}
+
+.input-field--error:focus {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(196, 0, 0, 0.15);
+}
+
+/* Disabled State */
+.input-field--disabled {
+    background-color: var(--gray-100);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Password Toggle Button */
+.input-toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: var(--font-size-sm);
+    color: var(--info);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: var(--font-weight-medium);
+}
+
+.input-toggle-password:hover {
+    text-decoration: underline;
+}
+
+/* Helper/Error Message */
+.input-message {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+}
+
+.input-message--error {
+    color: var(--error);
+}

@@ -1,0 +1,85 @@
+/* ========================================
+   components/ui/FormWrapper/FormWrapper.css
+   Form Wrapper Component Styles
+   ======================================== */
+
+.form-wrapper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: var(--white);
+}
+
+/* Logo */
+.form-wrapper-logo {
+    margin-bottom: 1.25rem;
+}
+
+.form-wrapper-logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Form Card */
+.form-wrapper {
+    width: 100%;
+    max-width: 350px;
+    padding: 1.5rem;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    background-color: var(--white);
+}
+
+/* Title */
+.form-wrapper-title {
+    font-size: 1.7rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--gray-700);
+    margin-bottom: 1.25rem;
+}
+
+/* Form */
+.form-wrapper-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+.form-wrapper-footer {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+/* Terms */
+.form-wrapper-terms {
+    max-width: 350px;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+    border-top: 1px solid var(--gray-200);
+}
+
+.form-wrapper-terms p {
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-wrapper-container {
+        padding: 1rem 0.75rem;
+    }
+
+    .form-wrapper {
+        padding: 1rem;
+        border: none;
+        border-top: 1px solid var(--gray-200);
+        border-bottom: 1px solid var(--gray-200);
+        border-radius: 0;
+    }
+}

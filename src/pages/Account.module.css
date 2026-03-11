@@ -1,0 +1,142 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+}
+
+.header {
+    border-bottom: 1px solid #eaeded;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.cardHeader {
+    border-bottom: 1px solid #eaeded;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.infoRow {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: 700;
+    width: 100px;
+    color: #565959;
+}
+
+.value {
+    flex: 1;
+}
+
+/* Orders Section */
+.orderItem {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.orderHeader {
+    background-color: #f0f2f2;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #565959;
+    border-bottom: 1px solid #ddd;
+}
+
+.orderBody {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderStatus {
+    font-weight: 700;
+    color: #007600;
+    /* Amazon green for success/delivered */
+}
+
+/* Address Section */
+.addressBox {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.editBtn {
+    color: #007185;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.editBtn:hover {
+    text-decoration: underline;
+    color: #c7511f;
+}
+
+.actionBtn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 4px;
+    /* Amazon button radius */
+    box-shadow: 0 2px 5px rgba(213, 217, 217, .5);
+    cursor: pointer;
+    text-align: center;
+}
+
+.actionBtn:hover {
+    background-color: #f7fafa;
+}
+
+.logoutBtn {
+    background-color: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+}
+
+.logoutBtn:hover {
+    background-color: #f4d078;
+}

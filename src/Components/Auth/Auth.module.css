@@ -1,0 +1,138 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f3f3; /* Light gray background like Amazon */
+  padding: 20px;
+}
+
+.authCard {
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 350px; /* Amazon's typical width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  font-size: 13px; /* Amazon uses small labels */
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px; /* Amazon inputs are slightly rounded */
+  font-size: 14px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(0, 0, 0, 0.07) inset;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+}
+
+.error {
+  color: #c40000;
+  font-size: 12px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  border-radius: 3px;
+  color: #111;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 15px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+
+.submitButton:hover {
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.submitButton:active {
+  border-color: #a88734 #9c7e31 #846a29;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e7e7e7;
+  z-index: 1;
+}
+
+.dividerText {
+  background-color: white;
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+  color: #767676;
+  font-size: 12px;
+}
+
+.switchButton {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+  border: 1px solid;
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-radius: 3px;
+  color: #111;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  text-decoration: none; /* In case it's a link */
+  text-align: center;
+  display: block; /* Ensure full width block behavior */
+}
+
+.switchButton:hover {
+  background: linear-gradient(to bottom, #e7e9ec, #d9dce1);
+}

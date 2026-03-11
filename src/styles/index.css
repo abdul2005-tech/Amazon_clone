@@ -1,0 +1,7 @@
+/* ========================================
+   styles/index.css
+   Main Styles Entry Point
+   ======================================== */
+
+@import './variables.css';
+@import './global.css';

@@ -1,0 +1,65 @@
+/* ========================================
+   pages/SignIn/SignIn.css
+   Sign In Page Styles
+   ======================================== */
+
+.signin-page {
+    min-height: 100vh;
+    background-color: var(--white);
+}
+
+/* Error Banner */
+.signin-error-banner {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-sm);
+    color: var(--error);
+    background-color: var(--error-light);
+    border: 1px solid var(--error);
+    border-radius: var(--radius-sm);
+}
+
+/* Keep Me Signed In */
+.signin-keep-signed {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.signin-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+}
+
+.signin-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--amazon-orange);
+}
+
+.signin-details-link {
+    font-size: var(--font-size-xs);
+    margin-left: auto;
+}
+
+/* Help Link */
+.signin-help {
+    margin-top: 1rem;
+    font-size: var(--font-size-sm);
+}
+
+/* Footer */
+.signin-footer {
+    text-align: center;
+}
+
+.signin-footer-text {
+    font-size: var(--font-size-sm);
+    color: var(--gray-500);
+    margin-bottom: 0.75rem;
+}
