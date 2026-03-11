@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FormWrapper, Input, Button } from '../../components/ui';
+import { FormWrapper, Input, Button } from '../../Components/ui';
 import { useAuth } from '../../context';
 import './SignUp.css';
 
