@@ -1,10 +1,12 @@
-dockerfile
-FROM python:3.10-slim
+FROM node:20
 
 WORKDIR /app
 
+COPY package*.json ./
+RUN npm install
+
 COPY . .
 
-RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
+EXPOSE 5173
 
-CMD ["python", "main.py"]
+CMD ["npm", "run", "dev"]
