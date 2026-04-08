@@ -7,6 +7,6 @@ spec:
   selector:
     app: amazon
   ports:
-    - port: 80
+    - port: 5173
       targetPort: 5173
       nodePort: 30007
