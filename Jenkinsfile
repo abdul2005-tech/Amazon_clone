@@ -17,13 +17,13 @@ pipeline {
 
         stage('Install') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Build Docker') {
             steps {
-                sh 'docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG .'
+                bat 'docker build -t $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG .'
             }
         }
 
@@ -34,14 +34,14 @@ pipeline {
                     usernameVariable: 'USER',
                     passwordVariable: 'PASS'
                 )]) {
-                    sh 'echo $PASS | docker login -u $USER --password-stdin'
+                    bat 'echo $PASS | docker login -u $USER --password-stdin'
                 }
             }
         }
 
         stage('Push Image') {
             steps {
-                sh 'docker push $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG'
+                bat 'docker push $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG'
             }
         }
     }
