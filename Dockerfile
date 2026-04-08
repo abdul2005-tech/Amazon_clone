@@ -1,15 +1,20 @@
-# Step 1: Build
+# STEP 1: Build
 FROM node:20 AS builder
 WORKDIR /app
+
 COPY package*.json ./
 RUN npm install
+
 COPY . .
 RUN npm run build
 
-# Step 2: Serve
+
+# STEP 2: Serve
 FROM node:20
 WORKDIR /app
+
 RUN npm install -g serve
+
 COPY --from=builder /app/dist ./dist
 
-CMD ["npx", "serve","-s", "dist", "-l", "tcp://0.0.0.0:5173"]
+CMD ["serve", "-s", "dist", "-l", "tcp://0.0.0.0:5173"]
