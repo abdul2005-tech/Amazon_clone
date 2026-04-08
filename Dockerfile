@@ -12,4 +12,4 @@ WORKDIR /app
 RUN npm install -g serve
 COPY --from=builder /app/dist ./dist
 
-CMD ["serve", "-s", "dist", "-l", "5173"]
+CMD ["npx", "serve","-s", "dist", "-l", "tcp://0.0.0.0:5173"]
